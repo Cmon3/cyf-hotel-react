@@ -4,12 +4,15 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 50px;
+  width: 50px;
+  margin-left: 5px;
+  margin-right: 20px;
 }
 
 .App-header {
   background-color: #222;
-  height: 50px;
+  height: 80px;
   padding: 20px;
   color: white;
   text-align: left;
@@ -35,6 +38,7 @@
     transform: rotate(360deg);
   }
 }
+
 .search {
   padding: 5px 0 20px 0;
 }
@@ -50,6 +54,7 @@ tr {
 .footer {
   padding-top: 20px;
   text-align: center;
+  list-style-type: none;
 }
 
 .card {
