@@ -5,6 +5,7 @@ import "./App.css";
 import Heading from "./Heading";
 import TouristInfoCards from "./TouristInfoCards";
 import FooterComp from "./FooterComp";
+import Restaurant from "./Restaurant";
 
 const App = () => {
   /*const cities = [{name: "London", image: "", cityPage: "", 
@@ -15,6 +16,7 @@ const App = () => {
       <Heading />
       <TouristInfoCards /*Cities={cities}*/ />
       <Bookings />
+      <Restaurant />
       <FooterComp />
     </div>
   );

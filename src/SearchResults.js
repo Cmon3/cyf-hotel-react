@@ -1,4 +1,5 @@
 import React from "react";
+//import moment from "moment";
 
 function SearchResultItem(props) {
   return (
@@ -17,6 +18,15 @@ function SearchResultItem(props) {
 }
 
 export default function SearchResults(props) {
+  /*const [activeRow, setActiveRow] = useState("")
+  const highlighRow = () => {
+    if (activeRow == "" ) {
+      setActiveRow("active-row")
+    } else {
+      setActiveRow("")
+    }
+  }*/
+
   return props.results.length > 0 ? (
     <table className="table">
       <thead>
