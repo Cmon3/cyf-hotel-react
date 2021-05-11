@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 //import moment from "moment";
 
 function SearchResultItem(props) {
+  const [activeRow, setActiveRow] = useState("");
+
+  const highlightRow = () => {
+    if (activeRow == "") {
+      setActiveRow("table-primary");
+    } else {
+      setActiveRow("");
+    }
+  };
+
   return (
-    <tr>
+    <tr onClick={highlightRow} className={activeRow}>
       <td>{props.roomId}</td>
       <td>{props.title}</td>
       <td>{props.firstName}</td>
@@ -18,15 +28,6 @@ function SearchResultItem(props) {
 }
 
 export default function SearchResults(props) {
-  /*const [activeRow, setActiveRow] = useState("")
-  const highlighRow = () => {
-    if (activeRow == "" ) {
-      setActiveRow("active-row")
-    } else {
-      setActiveRow("")
-    }
-  }*/
-
   return props.results.length > 0 ? (
     <table className="table">
       <thead>
