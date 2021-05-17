@@ -7,9 +7,9 @@ import TouristInfoCards from "./TouristInfoCards";
 import FooterComp from "./FooterComp";
 import Restaurant from "./Restaurant";
 
-import LondonImage from "./london.jpg";
-import ManchesterImage from "./manchester.jpg";
-import GlasgowImage from "./glasgow.jpg";
+import LondonImage from "./images/london.jpg";
+import ManchesterImage from "./images/manchester.jpg";
+import GlasgowImage from "./images/glasgow.jpg";
 
 const App = () => {
   const cities = [
