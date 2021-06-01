@@ -6,14 +6,11 @@ import { parse, differenceInDays } from "date-fns";
 
 const Bookings = () => {
   const [searchValue, setSearchValue] = useState("");
+  const [bookings, setBookings] = useState([]);
 
   const search = value => setSearchValue(value.toLowerCase());
 
-  const [bookings, setBookings] = useState([]);
-
   useEffect(() => {
-    console.log("Fetching the data..");
-
     fetch(`https://cyf-react.glitch.me`)
       .then(res => res.json())
       .then(data => {
@@ -28,10 +25,9 @@ const Bookings = () => {
       )
       .map(customer => {
         const { checkInDate, checkOutDate } = customer;
-        const inCome = parse(checkInDate, "yyyy-MM-dd", new Date());
-        const outCome = parse(checkOutDate, "yyyy-MM-dd", new Date());
-        customer.total_nights = differenceInDays(outCome, inCome);
-        //customer.total_nights = 4;
+        const inDate = parse(checkInDate, "yyyy-MM-dd", new Date());
+        const outDate = parse(checkOutDate, "yyyy-MM-dd", new Date());
+        customer.total_nights = differenceInDays(outDate, inDate);
         return customer;
       });
   };

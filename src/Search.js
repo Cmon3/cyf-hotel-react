@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import SearchButton from "./SearchButton";
 
 const Search = props => {
-  const [value, setValue] = useState("");
+  const [searchInput, setSearchInput] = useState("");
 
   const handleInput = event => {
     const inputValue = event.target.value;
-    setValue(inputValue);
+    setSearchInput(inputValue);
   };
 
   const handleSearch = event => {
     event.preventDefault();
-    props.search(value);
+    props.search(searchInput);
   };
 
   return (
@@ -25,7 +25,7 @@ const Search = props => {
             <label htmlFor="customerName">Customer name</label>
             <div className="search-row">
               <input
-                value={value}
+                value={searchInput}
                 onChange={handleInput}
                 type="text"
                 id="customerName"
